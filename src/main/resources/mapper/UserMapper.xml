@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.management.rd.dao.IUserDao">
+    <!-- 查询用户列表 -->
+	<select id="listUser" resultType="com.management.rd.pojo.User">
+        select f.ID from T_USER t,USER_INFO f where t.id=f.user_id and t.id='28702416'
+	</select>
+</mapper>
