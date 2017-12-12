@@ -31,4 +31,23 @@
         class="org.springframework.web.servlet.view.InternalResourceViewResolver"
         p:viewClass="org.springframework.web.servlet.view.JstlView" p:prefix="/WEB-INF/jsp/"
         p:suffix=".jsp" />
+        
+    <bean id="captchaProducer" class="com.google.code.kaptcha.impl.DefaultKaptcha">
+        <property name="config">
+            <bean class="com.google.code.kaptcha.util.Config">
+                <constructor-arg>
+                    <props>
+                        <prop key="kaptcha.image.width">80</prop>
+                        <prop key="kaptcha.image.height">40</prop>
+                        <prop key="kaptcha.textproducer.char.length">4</prop> 
+                        <prop key="kaptcha.textproducer.font.size">30</prop>
+                        <prop key="kaptcha.textproducer.font.color">127,0,127</prop>
+                        <prop key="kaptcha.border">no</prop>  
+                        <prop key="kaptcha.obscurificator.impl">com.google.code.kaptcha.impl.ShadowGimpy</prop>
+                        <prop key="kaptcha.noise.impl">com.google.code.kaptcha.impl.NoNoise</prop>
+                    </props>
+                </constructor-arg>
+            </bean>
+        </property>
+    </bean>
 </beans>

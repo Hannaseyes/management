@@ -19,7 +19,7 @@ public class UserServiceImpl implements IUserService {
     
     @Override
     public List<User> listUser() {
-        List<User> userList = userDao.listUser();
+        List<User> userList = this.userDao.listUser();
         return userList;
     }
 
