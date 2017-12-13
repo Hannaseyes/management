@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.google.code.kaptcha.Producer;
-import com.management.rd.utils.Constants;
+import com.management.rd.constants.KaptchaConsts;
 
 /**
  * 验证码控制器，包括网站验证码、手机验证码的生成及校验
@@ -56,7 +56,7 @@ public class CaptchaController {
         /* 生成验证码 */  
         String capText = captchaProducer.createText();  
         /* 保存验证码到Session中 */  
-        request.getSession().setAttribute(Constants.LOGIN_KAPTCHA_SESSION_KEY, capText);  
+        request.getSession().setAttribute(KaptchaConsts.LOGIN_KAPTCHA_SESSION_KEY, capText);  
         /* 使用给定文字创建图片 */  
         BufferedImage bi = captchaProducer.createImage(capText);  
         /* 数据写入输出流 */  

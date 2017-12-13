@@ -1,6 +1,6 @@
-package com.management.rd.utils;
+package com.management.rd.constants;
 
-public class Constants {
+public class KaptchaConsts {
     /**
      * 验证码静态常量
      */

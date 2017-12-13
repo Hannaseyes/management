@@ -11,11 +11,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.management.rd.constants.KaptchaConsts;
 import com.management.rd.pojo.SystemUser;
 import com.management.rd.pojo.User;
 import com.management.rd.service.IUserService;
 import com.management.rd.utils.CheckUtil;
-import com.management.rd.utils.Constants;
 import com.management.rd.utils.MD5Util;
 import com.management.rd.utils.RequestUtil;
 
@@ -36,7 +36,7 @@ public class UserController {
         SystemUser sysUser = new SystemUser();
         sysUser.setUsername(username);
         sysUser.setPassword(MD5Util.getMD5(password));
-        String sessionKaptcha = String.valueOf(session.getAttribute(Constants.LOGIN_KAPTCHA_SESSION_KEY));
+        String sessionKaptcha = String.valueOf(session.getAttribute(KaptchaConsts.LOGIN_KAPTCHA_SESSION_KEY));
 
         /**
          * 验证码进行拦截
