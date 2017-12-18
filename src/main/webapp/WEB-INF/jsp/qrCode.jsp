@@ -16,6 +16,7 @@
         </nav>
         <div class="Hui-article">
             <article class="cl pd-20">这是个空白页，请在此处加入您的代码！</article>
+            <img id="qrCode" alt="" src="qrCode/qrCode" >
         </div>
     </section>
 
@@ -23,7 +24,6 @@
 
     <!--请在下方写此页面业务相关的脚本-->
     <script type="text/javascript">
-        
     </script>
     <!--/请在上方写此页面业务相关的脚本-->
 </body>

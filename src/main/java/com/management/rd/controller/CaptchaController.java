@@ -14,6 +14,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.google.code.kaptcha.Producer;
 import com.management.rd.constants.KaptchaConsts;
+import com.management.rd.utils.IOUtil;
 
 /**
  * 验证码控制器，包括网站验证码、手机验证码的生成及校验
@@ -59,14 +60,9 @@ public class CaptchaController {
         request.getSession().setAttribute(KaptchaConsts.LOGIN_KAPTCHA_SESSION_KEY, capText);  
         /* 使用给定文字创建图片 */  
         BufferedImage bi = captchaProducer.createImage(capText);  
-        /* 数据写入输出流 */  
-        ServletOutputStream out = response.getOutputStream();  
-        ImageIO.write(bi, "jpg", out);  
-        try {  
-            out.flush();  
-        } finally {  
-            out.close();  
-        }
+        /* 数据写入输出流 */
+        IOUtil.imageWrite(bi, "jpg", response);
+        
         return null;
     }  
 }

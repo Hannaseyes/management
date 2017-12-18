@@ -1,3 +1,4 @@
+<%@ page language="java" import="java.util.*" contentType="text/html;charset=utf-8"%>
 <script type="text/javascript" src="<%=request.getContextPath()%>/lib/jquery/1.9.1/jquery.min.js"></script> 
 <script type="text/javascript" src="<%=request.getContextPath()%>/lib/layer/2.4/layer.js"></script>
  

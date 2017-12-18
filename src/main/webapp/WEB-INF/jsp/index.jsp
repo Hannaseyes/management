@@ -4,10 +4,8 @@
 <meta name="description" content="H-ui.admin v3.0，是一款由国人开发的轻量级扁平化网站后台模板，完全免费开源的网站后台管理系统模版，适合中小型CMS后台系统。">
 </head>
 <body>
-<%@include file="_header.jsp"%>
-
-<%@include file="_menu.jsp"%>
-
+	<%@include file="_header.jsp"%>
+	<%@include file="_menu.jsp"%>
 <section class="Hui-article-box">
 	<nav class="breadcrumb"><i class="Hui-iconfont"></i> <a href="/" class="maincolor">首页</a> 
 		<span class="c-999 en">&gt;</span>

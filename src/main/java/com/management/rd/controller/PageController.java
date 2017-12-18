@@ -24,5 +24,14 @@ public class PageController {
     @RequestMapping("/login")  
     public String toIndex(HttpServletRequest request,HttpServletResponse response){   
         return "login";  
-    } 
+    }
+    
+    /**
+     * 跳转二维码页面
+     * @return
+     */
+    @RequestMapping("/qrCode")  
+    public String toQRCode(){
+        return "qrCode";  
+    }
 }
