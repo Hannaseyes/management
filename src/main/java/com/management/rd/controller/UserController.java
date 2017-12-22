@@ -38,9 +38,7 @@ public class UserController {
         sysUser.setPassword(MD5Util.getMD5(password));
         String sessionKaptcha = String.valueOf(session.getAttribute(KaptchaConsts.LOGIN_KAPTCHA_SESSION_KEY));
 
-        /**
-         * 验证码进行拦截
-         */
+        //验证码进行拦截
         if (CheckUtil.emptyCheck(kaptcha)) {
             return "login";
         }
